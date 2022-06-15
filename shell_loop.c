@@ -25,6 +25,7 @@ if (in[i - 1] == ' ' || in[i - 1] == '\t' || in[i - 1] == ';')
 up_to = i;
 }
 }
+
 if (up_to != 0)
 {
 in = _realloc(in, i, up_to + 1);
@@ -49,7 +50,7 @@ loop = 1;
 while (loop == 1)
 {
 write(STDIN_FILENO, "^-^ ", 4);
-input = read_line(&i_eof);		
+input = read_line(&i_eof);
 if (i_eof != -1)
 {
 input = without_comment(input);
